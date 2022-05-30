@@ -3,8 +3,12 @@
 int count = 0;
 
 // Ask max number 
-Console.Write("Bereken priemgetallen tot ");
+Console.WriteLine($"Max prime is {int.MaxValue}");
+Console.Write("Calculate primes upto ");
 int max = int.Parse(Console.ReadLine()) + 1;
+if (max > int.MaxValue)
+    Console.WriteLine("Number is too large.");
+
 
 bool[] primes = new bool[max];
 // fill array with true values
