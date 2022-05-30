@@ -3,11 +3,18 @@
 int count = 0;
 
 // Ask max number 
-Console.WriteLine($"Max prime is {int.MaxValue}");
-Console.Write("Calculate primes upto ");
-int max = int.Parse(Console.ReadLine()) + 1;
-if (max > int.MaxValue)
-    Console.WriteLine("Number is too large.");
+int max;
+do
+{
+    Console.WriteLine($"Max prime is {int.MaxValue}");
+    Console.Write("Calculate primes upto ");
+    max = int.Parse(Console.ReadLine());
+    if ((max > int.MaxValue) || (max <= 0))
+        Console.WriteLine("Number is not valid.");
+} while (max == 0);
+
+// C# creates arrays with indexes from 0 to given number-1, so add 1 to max so biggest index of array == max
+max++;
 
 bool[] primes = new bool[max];
 // fill array with true values
