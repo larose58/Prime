@@ -9,7 +9,6 @@ int max = int.Parse(Console.ReadLine()) + 1;
 if (max > int.MaxValue)
     Console.WriteLine("Number is too large.");
 
-
 bool[] primes = new bool[max];
 // fill array with true values
 Array.Fill(primes, true);
