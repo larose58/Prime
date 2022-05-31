@@ -54,6 +54,6 @@ void FindPrimes(long MaxNr)
         // if primes[i] = true then i is a prime
         if (primes[i])
             // All multiplies of are not a prime
-            for (int j = i + i; j < MaxNr; j += i)
+            for (int j = i * i; j < MaxNr; j += i)
                 primes[j] = false;
 }
