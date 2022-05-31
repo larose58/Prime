@@ -47,7 +47,7 @@ if (Console.ReadLine() == "y")
     Console.ReadLine();
 }
 
-void FindPrimes(long MaxNr)
+void FindPrimes(int MaxNr)
 {
     // Find primes between 2 and MaxNr
     for (int i = 2; i < Math.Sqrt(MaxNr); i++)
